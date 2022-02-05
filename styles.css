@@ -20,8 +20,7 @@
     position: absolute;
     width: 100%;
     overflow: hidden;
-    height: 100%;
-    bottom: -1px;
+    height: 60%;
     background-image: linear-gradient(to top, #53c3be 20%, #515190 80%);
 }
 .bgTop {
@@ -84,9 +83,36 @@
 
 
    
-   .title{
-       font-size: 100px;
-       color: rgb(44, 39, 39);
+   .text-to-type{
+       font-size: 5vw;
+       color: rgb(36, 35, 35);
        text-align: center;
-       margin: auto;
+       z-index: 20;
+       position: absolute;
+       left: 25%;
+       top: 70%;
    }
+
+   .text-to-type {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(49, 48, 48); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 4.5s steps(50, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 60% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(54, 52, 52); }
+  }
+   
