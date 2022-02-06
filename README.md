@@ -7,5 +7,6 @@ In this repository I share my css animation practice:
 3. Coming soon!!!!
 
 
-Wanna see it live? Click here: 
+Wanna see it live? 
+Click here: https://sabrinasastre.github.io/my_css_animations/ 
 
