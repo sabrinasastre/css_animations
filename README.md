@@ -6,7 +6,6 @@ In this repository I share my css animation practice:
 2. Typing effect 
 3. Coming soon!!!!
 
-
-Wanna see it live? 
-Click here: https://sabrinasastre.github.io/my_css_animations/ 
+Wanna see it live?
+Live: https://sabrinasastre.github.io/my_css_animations/ 
 
