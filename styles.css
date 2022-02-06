@@ -79,17 +79,18 @@
 
 
       
-      /*------------------typewriter--------------------------*/
+      /*----------------typing effect--------------------------*/
 
 
-   
+   .text-to-type-container{
+       display: flex;
+       justify-content: center;
+   }
    .text-to-type{
        font-size: 5vw;
        color: rgb(36, 35, 35);
-       text-align: center;
        z-index: 20;
        position: absolute;
-       left: 20%;
        top: 70%;
    }
 
