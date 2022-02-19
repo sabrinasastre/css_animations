@@ -1,108 +1,114 @@
-*{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-/*------------------wave--------------------------*/   
+/*------------------wave--------------------------*/
 .wave-background {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 60%;
-    background-image: linear-gradient(to top, #53c3be 20%, #8989a3 80%);
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 60%;
+  background-image: linear-gradient(to top, #53c3be 20%, #8989a3 80%);
 }
 .top-layer {
-    z-index: 15;
-    opacity: 0.5;
+  z-index: 15;
+  opacity: 0.5;
 }
 .mid-layer {
-    z-index: 10;
-    opacity: 0.75;
+  z-index: 10;
+  opacity: 0.75;
 }
 .back-layer {
-    z-index: 5;
+  z-index: 5;
 }
 
 /* OVERLAPING: z-index only affects elements that have a position value other than static (the default). 
 Elements can overlap for a variety of reasons. Absolutely positioned elements overlap each other.
 The element with the highest z-index is on top*/
 
-
 .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
 }
 .wave-top {
-    background-size: 50% 100px;
+  background-size: 50% 100px;
 }
 .wave-animation .wave-top {
   animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
 }
 .wave-middle {
-    background-size: 50% 120px;
+  background-size: 50% 120px;
 }
 .wave-animation .wave-middle {
-    animation: move_wave 10s linear infinite;
+  animation: move_wave 10s linear infinite;
 }
 .wave-bottom {
-    background-size: 50% 100px;
+  background-size: 50% 100px;
 }
 .wave-animation .wave-bottom {
-    animation: move_wave 15s linear infinite;
+  animation: move_wave 15s linear infinite;
 }
 
 @keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-      }
-
-
-      
-      /*------------------typing effect--------------------------*/
-
-   .text-to-type-container{
-       display: flex;
-       justify-content: center;
-   }
-   
-   .text-to-type {
-    font-size: 5vw;
-    color: rgb(36, 35, 35);
-    margin-top: 500px;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(49, 48, 48); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    letter-spacing: .15em; 
-    animation: 
-      typing 4.5s steps(50, end),
-      blink-caret .75s step-end infinite;
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
   }
-  
-  /* typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 60% }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
   }
-  
-  /* cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(54, 52, 52); }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
   }
-   
+}
+
+/*------------------typing effect--------------------------*/
+
+.text-to-type-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+}
+
+.text-to-type {
+  font-size: 5vw;
+  color: rgb(36, 35, 35);
+  margin-top: 500px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(49, 48, 48); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: 0.15em;
+  animation: typing 4.5s steps(50, end), blink-caret 0.75s step-end infinite;
+}
+
+/* typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+/* cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(54, 52, 52);
+  }
+}
